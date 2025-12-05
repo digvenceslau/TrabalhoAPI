@@ -1,0 +1,38 @@
+:root{
+    --muted:#A1BC98;
+    --accent:#778873;
+    --cream:#F1F3E0;
+}
+
+/* Page default: gradient background and sensible text color */
+body{
+    margin:0;
+    padding:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg,var(--accent),var(--muted));
+    color: #102014;
+}
+
+/* Go back circular button used across activities */
+.go-back-btn{
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:52px;
+    height:52px;
+    background-color:var(--cream);
+    border-radius:50%;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    transition: transform .18s ease, box-shadow .18s ease;
+    text-decoration:none;
+}
+.go-back-btn:hover{transform:scale(1.06);box-shadow:0 10px 26px rgba(0,0,0,0.24)}
+.go-back-btn img{width:28px;height:28px;object-fit:contain;display:block}
+
+/* Helper classes to style panels and headings consistently */
+.theme-panel{background:var(--cream);border-radius:8px;padding:16px;color:var(--accent);box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.theme-heading{color:var(--accent)}

@@ -1,0 +1,139 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação com Apostas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="../index.html" class="go-back-btn" title="Go back to activities">
+        <img src="../img/goback.png" alt="Go back">
+    </a>
+    <div class="container">
+        <h1>Casino - Trabalho 13</h1>
+        
+        <!-- Secção de Configuração Inicial -->
+        <div id="setup-section">
+            <form id="setup-form">
+                <label for="player-name">Nome:</label>
+                <input type="text" id="player-name" required>
+                
+                <label for="player-age">Idade:</label>
+                <input type="number" id="player-age" min="18" required>
+                <div id="age-warning">You are not old enough to play, leave now!</div>
+                
+                <label for="player-sex">Sexo:</label>
+                <select id="player-sex" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+                
+                <label>Data de Nascimento:</label>
+                <div style="display: flex; gap: 10px;">
+                    <div>
+                        <label for="player-dob-day">Dia:</label>
+                        <input type="number" id="player-dob-day" min="1" max="31" placeholder="DD" required>
+                    </div>
+                    <div>
+                        <label for="player-dob-month">Mês:</label>
+                        <input type="number" id="player-dob-month" min="1" max="12" placeholder="MM" required>
+                    </div>
+                    <div>
+                        <label for="player-dob-year">Ano:</label>
+                        <input type="number" id="player-dob-year" min="1900" max="2006" placeholder="YYYY" required>
+                    </div>
+                </div>
+                
+                <button type="submit">Iniciar Jogo</button>
+            </form>
+        </div>
+        
+        <!-- Seção de Carregamento de Saldo -->
+        <div id="balance-section" class="hidden">
+            <h2>Saldo Atual: <span id="balance">0</span> €</h2>
+            <h3>Carregar Saldo com Notas</h3>
+            <div class="notes">
+                <img src="img/img10euro.jpg" alt="Nota de 10€" data-value="10"  >
+                <img src="img/img20euro.jpg" alt="Nota de 20€" data-value="20"  >
+                <img src="img/img50euro.jpg" alt="Nota de 50€" data-value="50"  >
+            </div>
+        </div>
+        
+        <!-- Seção de Jogo -->
+        <div id="game-section" class="hidden">
+            <button id="change-credentials-btn" type="button" style="display: block; margin: 0 auto 20px auto; background-color: #A1BC98; color: #F1F3E0; padding: 8px 16px; font-size: 14px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Change Credentials</button>
+            <h2>Tentativas: <span id="attempts">0</span></h2>
+            <h3>Valor da Aposta</h3>
+            <form id="bet-form">
+                <label for="bet-amount-input">Escolha o valor da aposta:</label>
+                <input type="number" id="bet-amount-input" min="0" max="10000" value="0" required>
+                
+                <label>Jogar com Dicas? (10% desconto no ganho)</label>
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button type="button" id="hints-yes-btn" class="hints-btn active">Sim</button>
+                    <button type="button" id="hints-no-btn" class="hints-btn">Não</button>
+                </div>
+                <input type="hidden" id="hints-selection" value="no">
+                
+                <button type="submit">Confirmar Aposta</button>
+            </form>
+            <p>Aposta Selecionada: <span id="bet-amount">0</span> €</p>
+            
+            <h3>Escolha o Intervalo e o Número</h3>
+            <form id="guess-form">
+                <div>
+                    <label for="range-min">Número Mínimo:</label>
+                    <input type="number" id="range-min" value="1" required>
+                </div>
+                <div>
+                    <label for="range-max">Número Máximo:</label>
+                    <input type="number" id="range-max" value="10" required>
+                </div>
+                <div>
+                    <label for="guess">Seu Palpite:</label>
+                    <input type="number" id="guess" required>
+                </div>
+                <button type="submit">Apostar</button>
+            </form>
+            
+            <div id="message"></div>
+            <div id="hint" class="hidden"></div>
+            
+            <button id="end-game-btn" type="button" style="margin-top: 20px; background-color: #ff6b6b; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Encerrar Jogo</button>
+            
+            <!-- Tabela de Histórico -->
+            <h3>Histórico de Apostas</h3>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Tentativa</th>
+                        <th>Número Apostado</th>
+                        <th>Valor Apostado</th>
+                        <th>Resultado</th>
+                        <th>Dica (se ativada)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+        <!-- Seção de Fim de Jogo -->
+        <div id="end-section" class="hidden">
+            <h2>Fim de Jogo!</h2>
+            <div id="check">
+                <h3>Cheque</h3>
+                <p>Para: <span id="check-name"></span></p>
+                <p>Quantia: <span id="check-amount"></span> €</p>
+            </div>
+            <button id="bet-more-btn" type="button" style="margin-top: 30px; background-color: #A1BC98; color: #F1F3E0; padding: 12px 30px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Bet More</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

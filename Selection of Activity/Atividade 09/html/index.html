@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios em HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../../theme.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <a href="../../index.html" class="go-back-btn" title="Go back to activities">
+        <img src="../../img/goback.png" alt="Go back">
+    </a>
+    <h1>Desafios em JavaScript - Trabalho 09</h1>
+
+
+    <section id="desafio1">
+        <h2>1. Sucessor de um Número</h2>
+        <label for="num1">Digite um número:</label>
+        <input type="number" id="num1">
+        <button onclick="calcularSucessor()">Calcular</button>
+        <div class="resultado" id="res1"></div>
+    </section>
+
+
+    <section id="desafio2">
+        <h2>2. Antecessor de um Número</h2>
+        <label for="num2">Digite um número:</label>
+        <input type="number" id="num2">
+        <button onclick="calcularAntecessor()">Calcular</button>
+        <div class="resultado" id="res2"></div>
+    </section>
+
+
+    <section id="desafio3">
+        <h2>3. Área e Perímetro de um Retângulo</h2>
+        <label for="base">Base:</label>
+        <input type="number" id="base">
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura">
+        <button onclick="calcularRetangulo()">Calcular</button>
+        <div class="resultado" id="res3"></div>
+    </section>
+
+
+    <section id="desafio4">
+        <h2>4. Idade em Dias</h2>
+        <label for="anos">Idade em anos:</label>
+        <input type="number" id="anos">
+        <button onclick="calcularIdadeDias()">Calcular</button>
+        <div class="resultado" id="res4"></div>
+    </section>
+
+
+    <section id="desafio5">
+        <h2>5. Idade em Anos</h2>
+        <label for="dias">Idade em dias:</label>
+        <input type="number" id="dias">
+        <button onclick="calcularIdadeAnos()">Calcular</button>
+        <div class="resultado" id="res5"></div>
+    </section>
+
+ 
+    <section id="desafio6">
+        <h2>6. Valor com 10% de Desconto</h2>
+        <label for="valorProduto">Valor do produto:</label>
+        <input type="number" id="valorProduto">
+        <button onclick="calcularDesconto()">Calcular</button>
+        <div class="resultado" id="res6"></div>
+    </section>
+
+
+    <section id="desafio7">
+        <h2>7. Metade, Dobro, Quadrado e Cubo</h2>
+        <label for="num7">Digite um número:</label>
+        <input type="number" id="num7">
+        <button onclick="calcularOperacoes()">Calcular</button>
+        <div class="resultado" id="res7"></div>
+    </section>
+
+
+    <section id="desafio8">
+        <h2>8. Área e Perímetro de um Círculo</h2>
+        <label for="raio">Raio:</label>
+        <input type="number" id="raio">
+        <button onclick="calcularCirculo()">Calcular</button>
+        <div class="resultado" id="res8"></div>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

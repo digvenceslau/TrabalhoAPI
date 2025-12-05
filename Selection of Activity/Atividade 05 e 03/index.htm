@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema Solar</title>
+        <link rel="stylesheet" href="C:\Users\DiogoVenceslau26556\OneDrive - Agrupamento de Escolas Monte da Lua\Documentos\API\Selection of Activity\theme.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- Link da fonte Poppins -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <a href="C:\Users\DiogoVenceslau26556\OneDrive - Agrupamento de Escolas Monte da Lua\Documentos\API\Selection of Activity\index.html" class="go-back-btn" title="Go back to activities">   
+            <img src="C:\Users\DiogoVenceslau26556\OneDrive - Agrupamento de Escolas Monte da Lua\Documentos\API\Selection of Activity\img\goback.png" alt="Go back">
+        </a>
+
+        <div style="background-color: #71C0BB;height: 50px;text-align: center;color:#E3EEB2">
+        <!-- Nome no centro da imagem, título -->
+         <center> 
+            <h1>Sistema Solar - Trabalho 03/05</h1>     
+        </center>
+        </div>
+
+        <div style="background-color: #4E6688;">
+            <center>
+                <img src="img/abstract-still-life-universe-composition.jpg" style="height: 500px;align-items: center;">
+            </center>
+        </div>
+        <!-- Foto do Sistema Solar  -->
+        <div style="background-color: #71C0BB; font-family:Poppins; color:#373b24;margin-bottom: 30px" >
+            <p style="text-align: center; font-size:30px;margin-right: 300px; margin-left: 300px; padding: 10px; margin-top: -0px;">
+                O <b>Sistema Solar</b> é composto por uma estrela central, <b>o Sol</b>, e todos os corpos celestes que orbitam ao seu redor, 
+                incluindo planetas, luas, asteroides, cometas e outros objetos menores. 
+                Ele é formado por <b>oito planetas principais</b>: <i>Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno</i>. 
+                Além disso, existem planetas anões como Plutão e muitos outros corpos menores que compõem o cinturão de asteroides e a nuvem de Oort.
+            </p>
+        </div>
+    <!-- UP=Texto a Explicar -->
+     <!-- DOWN= Todos os planetas com informação e um botão que abre uma nova "tab" e que abre a imagem inteira -->
+     <div STYLE="background-color: #242c38; color:#8bb4a1; font-family:Poppins;font-size: 24px; padding-bottom: 30px; height: 2100px; margin-top: -30px;">
+        <div class="side_float">
+            <img width="300" src="img/Mercury.jpg">
+            <h4>Planeta mais próximo do Sol, pequeno e rochoso.</h4>
+            <button class="openImageButton" onclick="openPage('mercury.htm')">Vem conhecer mais</button>
+
+        </div>
+        <div class="side_float">
+            <img width="300" src="img/Venus.jpg">
+            <h4>Atmosfera densa e quente, semelhante à Terra.</h4>
+                        <button class="openImageButton" onclick="openPage('venus.htm')">Vem conhecer mais</button>
+
+        </div>
+                <div class="side_float">
+            <img width="300" src="img/Earth.jpg">
+            <h4>Único planeta conhecido com vida e água líquida.</h4>
+                        <button class="openImageButton" onclick="openPage('earth.htm')">Vem conhecer mais</button>
+
+        </div>
+        <div class="side_float">
+            <img width="300" src="img/Mars.jpg">
+            <h4>Planeta vermelho com calotas polares e poeira.</h4>
+                        <button class="openImageButton" onclick="openPage('mars.htm')">Vem conhecer mais</button>
+
+        </div>
+                <div class="side_float">
+            <img width="300" src="img/Jupiter.jpg">
+            <h4>Maior planeta, com tempestades e muitas luas.</h4>
+                        <button class="openImageButton" onclick="openPage('jupiter.htm')">Vem conhecer mais</button>
+
+        </div>
+        <div class="side_float">
+            <img width="300" src="img/Saturn.jpg">
+            <h4>Conhecido pelos seus impressionantes aneis de gelo.</h4>
+                        <button class="openImageButton" onclick="openPage('saturn.htm')">Vem conhecer mais</button>
+
+        </div>
+                <div class="side_float">
+            <img width="300" src="img/Uranus.jpg">
+            <h4>Gira de lado, tem cor azul-esverdeada.</h4>
+                        <button class="openImageButton" onclick="openPage('uranus.htm')">Vem conhecer mais</button>
+
+        </div>
+        <div class="side_float">
+            <img width="300" src="img/Neptune.jpg">
+            <h4>Planeta frio, ventos fortes e cor azul profunda.</h4>
+                        <button class="openImageButton" onclick="openPage('neptune.htm')">Vem conhecer mais</button>
+
+
+        </div>
+    </div>
+    <!-- DOWN=Footer  -->
+    <div>
+        <footer style="background-color: #4E6688; color:#E3EEB2; text-align: center; padding: 10px;">
+            &copy; 2025 Sistema Solar. Todos os direitos não reservados. :[
+    </div>
+    </body>
+</html>
+
+<script>
+    function openPage(url) {
+        window.location.href=url;
+    }
+</script>

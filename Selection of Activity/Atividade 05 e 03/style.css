@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Como por as imagens lado a lado */
+.side_float
+{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+/* Como o Botão está estruturado */
+button {
+    background-color: #5d928e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #8bc479;
+}

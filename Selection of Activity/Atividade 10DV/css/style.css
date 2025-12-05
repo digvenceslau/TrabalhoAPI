@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #778873;
+  --accent: #A1BC98;
+  --cream: #F1F3E0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+h1 {
+  position: absolute;
+  top: 20px;
+  font-size: 32px;
+  color: var(--cream);
+}
+
+.go-back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--cream);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.go-back-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.go-back-btn img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.converter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.box {
+  background-color: var(--cream);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+input, select {
+  width: 300px;
+  height: 150px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 70px;
+  outline: none;
+  font-weight: bold;
+  background-color: var(--cream);
+  color: var(--bg-color);
+}
+
+.equal {
+  font-size: 80px;
+  font-weight: bold;
+  color: var(--accent);
+}

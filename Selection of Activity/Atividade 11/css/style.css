@@ -1,0 +1,89 @@
+/* Page-wide settings: center the box and apply requested palette */
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #778873; /* page background as requested */
+    color: #A1BC98; /* default text color requested */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 700px;
+    /* allow height to fit content instead of fixed large height */
+    min-height: 300px;
+    background-color: #ecece2; /* subtle panel background so inputs are readable */
+    border: 3px solid rgba(0,0,0,0.08);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.12);
+    margin: 20px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.form{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* align form content to the left side of the box */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* left align */
+    gap: 8px;
+    font-family: Poppins, sans-serif;
+    font-size: 24px; /* requested size for form */
+}
+.input{
+    width: 60%;
+    padding: 10px 14px;
+    margin: 6px 0;
+    display: block;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 4px;
+    font-size: 24px; /* matches form size */
+    font-family: Poppins, sans-serif;
+    color: #3b3b3b;
+}
+.button{
+    width: 60%;
+    background-color: #F1F3E0; /* requested button background */
+    color: #A1BC98; /* requested button text color */
+    padding: 12px 18px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 24px; /* button font changed to 24px as requested */
+    display: block;
+    font-family: Poppins, sans-serif;
+}
+.result{
+    margin-top: 20px;
+    /* make the result box match the .box appearance and height */
+    font-size: 24px;
+    font-weight: 600;
+    color: #3b3b3b; /* darker text for readability inside result area */
+    font-family: Poppins, sans-serif;
+    border: 3px solid rgba(0,0,0,0.08);
+    background: #ecece2; /* same as .box background */
+    padding: 16px;
+    min-height: 300px; /* match .box min-height */
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+.btn{
+    background-color: #F1F3E0; /* requested button background */
+    color: #A1BC98; /* requested text color */
+    padding: 12px 28px;
+    font-size: 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

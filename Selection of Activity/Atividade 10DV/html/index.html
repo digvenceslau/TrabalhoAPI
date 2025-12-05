@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a href="../../index.html" class="go-back-btn" title="Go back to activities">
+    <img src="../../img/goback.png" alt="Go back">
+  </a>
+  <div class="converter">
+    <h1 class="h1">Temperature Converter - Trabalho 10</h1>
+    <div class="box">
+      <input type="number" id="temp1" onimput="temp_change" placeholder="0">
+      <select id="unit1">
+        <option value="C">°C</option>
+        <option value="F">°F</option>
+        <option value="K">K</option>
+      </select>
+    </div>
+
+    <div class="equal">=</div>
+
+    <div class="box">
+      <input type="number" id="temp2" placeholder="0">
+      <select id="unit2">
+        <option value="C">°C</option>
+        <option value="F">°F</option>
+        <option value="K">°K</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

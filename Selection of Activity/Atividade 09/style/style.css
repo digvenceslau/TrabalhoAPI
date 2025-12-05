@@ -1,0 +1,54 @@
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(180deg,var(--accent),var(--muted));
+            color: #102014;
+        }
+        h1 {
+            text-align: center;
+            color: var(--cream);
+        }
+        section {
+            background-color: var(--cream);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            color: var(--accent);
+        }
+        h2 { color: var(--accent) }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: var(--accent);
+            color: var(--cream);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { opacity: .95 }
+        .resultado {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.04);
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        /* go-back button styling moved to theme.css; keep minimal override */
+        .go-back-btn img { width:28px;height:28px;object-fit:contain }
